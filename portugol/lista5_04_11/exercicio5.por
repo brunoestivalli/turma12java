@@ -34,9 +34,6 @@ programa
 		}senao{
 			escreva("Código invalido")
 		}
-			
-		
-		
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -44,7 +41,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 698; 
+ * @POSICAO-CURSOR = 561; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

@@ -40,36 +40,45 @@ programa
 	inteiro x=0
 	inteiro somaNota [29]
 	caracter opcao
+	caracter sexo[29]
+
+		para(inteiro i=0; i<29;i++){
+			entrega[i] = ' '
+			se(masculino[i] == verdadeiro){
+				sexo[i] = 'M'
+			}
+			senao se (masculino[i] == falso){
+				sexo[i] = 'F'
+			}
+		}
 		faca
 		{
 			
-			
-			
-			
    			para (x=0 ; x<29 ; x++)
 				{
-					escreva(" "+ "G4-" + x + "\t\t\t" + nomes[x] + "\t\t\t\t"   + email[x] +"\t\t\t" + masculino[x] + "\n")
+					escreva(" "+ "G4-" + x + "\t\t\t" + nomes[x] + "\t\t\t\t"   + email[x] +"\t\t\t" + sexo[x] + "\n")
 				}
 			faca
 			{	
 				escreva("\n\nDigite o indíce: " )
-				leia(indice)
+					leia(indice)
 				escreva("\n\n")
-				escreva(" "+ "G4-" + indice + "\t" + nomes[indice] + "\t\t\t\t"   + email[indice] +"\t\t\t" + masculino[indice] + "\t\t\t\t Notas: "+somaNota[indice]  + "\n")
+				escreva("G4-" + indice + "\t" + nomes[indice] + "\t\t\t\t"   + email[indice] +"\t\t\t\t  " + sexo[indice] + "\t\t\t\t Notas: "+somaNota[indice]  + "\n")
 				escreva("\n\nFez a entrega S/N: ")
-				leia(opcao)
-				
+					leia(opcao)
 				se (opcao == 's' ou opcao == 'S')
 				{
 					somaNota[indice]=somaNota[indice]+1
+					entrega[indice] = 'S'
+					
+				}senao se ( opcao == 'n' ou opcao == 'N'){
+					entrega[indice] = 'N'
 				}
 				
 				escreva("\nA nota é de: ",somaNota[indice])
 				escreva("\n\nDeseja continuar S / N?: ")
 				leia(continuar)
 
-				
-				
 				se (continuar == 's' ou continuar == 'S')
 				{
 					entregaFinalizar = verdadeiro
@@ -78,14 +87,13 @@ programa
 				{
 					entregaFinalizar	= falso
 					escreva("\n\n")
-					escreva("CÓDIGOS \t\t NOMES \t\t\t\t\t\t EMAIL \t\t\t\t\t\t ALUNO \t\t\t NOTAS\n\n\n")
+					escreva("CÓDIGOS \t\t NOMES \t\t\t\t\t\t EMAIL \t\t\t\t\t\t ALUNO \t\tENTREGA \t NOTAS\n\n\n")
 					para (x=0 ; x<29 ; x++){
-					escreva(" "+ "G4-" + x + "\t\t\t" + nomes[x] + "\t\t\t"+ email[x] +"\t\t\t" + masculino[x] + "\t\t\t"+somaNota[x]+"\n")
+					escreva(" "+ "G4-" + x + "\t\t\t" + nomes[x] + "\t\t\t"+ email[x] +"\t\t\t" + sexo[x] + "\t\t" +entrega[x]+ "\t\t"+somaNota[x]+"\n")
 					}
 				}	
 			}
 			
-				
 			enquanto (entregaFinalizar==verdadeiro)
 			
 			
@@ -101,8 +109,6 @@ programa
 			}
 		}enquanto (confirmacao == verdadeiro)
 	
-		
-		 
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -110,7 +116,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1042; 
+ * @POSICAO-CURSOR = 3259; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

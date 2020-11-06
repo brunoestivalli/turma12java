@@ -33,9 +33,7 @@ Acima de 30 obeso
 		}senao{
 			escreva("seu peso é de: ", mat.arredondar((IMC),2), " KG")
 			escreva("\nAcima de 30 obeso\n")
-		}
-
-		
+		}	
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -43,7 +41,7 @@ Acima de 30 obeso
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 646; 
+ * @POSICAO-CURSOR = 915; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

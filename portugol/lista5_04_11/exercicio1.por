@@ -11,7 +11,6 @@ Código Condição de pagamento
 2-À vista no cartão de crédito, recebe 15% de desconto
 3-Em duas vezes, preço normal de etiqueta sem juros
 4-Em três vezes, preço normal de etiqueta mais juros de 10%
-
 	 */
 	funcao inicio()
 	{	real valor,valorDesconto,valorParcela,valorParJu
@@ -26,7 +25,6 @@ Código Condição de pagamento
 		escreva("\n\nEscolha a forma de pagamento(1/2/3/4):  ")
 		leia(Escolha)
 		
-			
 				se(Escolha==1){
 					valorDesconto=valor-((valor*20)/100)
 					mat.arredondar((valorDesconto),2)
@@ -46,9 +44,6 @@ Código Condição de pagamento
 					mat.arredondar((valorParJu),2)
 					escreva("R$ ",valorParJu)		
 				}
-
-			
-		
 			
 	}
 }	
@@ -59,7 +54,7 @@ Código Condição de pagamento
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1069; 
+ * @POSICAO-CURSOR = 1423; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
