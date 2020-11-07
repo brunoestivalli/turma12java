@@ -1,6 +1,5 @@
 import java.util.Scanner;
-
-public class Temperaturas {
+public class TrocaTemperaturas {
 	public static void main(String[] args) {
 		Scanner read=new Scanner(System.in);
 		
@@ -12,7 +11,9 @@ public class Temperaturas {
 		
 		f=(c*1.8)+32;
 		System.out.println("Sua temp em Fahrenheit é de:"+f+"°F");
+		read.close();
 				
 		
 	}
+
 }

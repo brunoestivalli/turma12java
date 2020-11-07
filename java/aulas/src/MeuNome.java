@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class MeuNome {
 	public static void main(String[] args) {
 		Scanner read=new Scanner(System.in);
@@ -27,8 +26,9 @@ public class MeuNome {
 		
 		
 		System.out.printf("meu nome é: %s , minha idade é: %d e meu salario é: %.2f",nome,idade,salario);
-		
+		read.close();
 		
 		
 	}
+
 }
