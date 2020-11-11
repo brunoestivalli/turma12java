@@ -29,20 +29,20 @@ public class Exercicio3 {
 		
 		if((z*z)<=1000) {
 			System.out.println("O valor digitado é de: "+x);
-			System.out.println("E seu quadrado é de: "+(x*x));
+			System.out.println("E seu quadrado é de: "+Math.pow(x,2));
 			
 			System.out.println("O segundo valor digitado é de: "+y);
-			System.out.println("E seu quadrado é de: "+(y*y));
+			System.out.println("E seu quadrado é de: "+Math.pow(y,2));
 			
 			System.out.println("O terceiro valor digitado é de: "+z);
-			System.out.println("E seu quadrado é de: "+(z*z));
+			System.out.println("E seu quadrado é de: "+Math.pow(z,2));
 			
 			System.out.println("O quarto valor digitado é de: "+w);
-			System.out.println("E seu quadrado é de: "+(w*w));
+			System.out.println("E seu quadrado é de: "+Math.pow(w,2));
 			
 		}else {
 			
-			System.out.println("\nO valor ao quadrado do 3 valor  é de: "+(z*z));
+			System.out.println("\nO valor ao quadrado do 3 valor  é de: "+Math.pow(z,2));
 		}
 		
 		read.close();
