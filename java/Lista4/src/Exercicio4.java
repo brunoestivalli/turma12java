@@ -9,36 +9,25 @@ public class Exercicio4 {
 		Scanner leia=new Scanner(System.in);
 		Random random=new Random();
 		
-		int vetor[][]=new int [3][3];
-		int linha=0;
-		int coluna=0;
-		int soma=0;
-		
-		System.out.println("\t\t\tMatriz");
-		for(linha=0;linha<3;linha++){
-			for(coluna=0; coluna<3;coluna++){
-				vetor[][]]=Util.sorteia(1,10)
-				se(x==y){
-				somaDiagonal=somaDiagonal+quadrinhoDe8[x][y]
+		int linha=3;
+		int coluna=3;
+		int matriz[][]=new int [linha][coluna];
+		int x= 0, y=0,somaDiagonal=0;
+
+		for(x=0;x<linha;x++){
+			for(y=0; y<coluna;y++){
+				matriz[x][y]=random.nextInt(9);
+				if(x==y){
+					somaDiagonal=somaDiagonal+matriz[x][y];
+						}
+					}
 				}
+				for(x=0;x<linha;x++){
+					for(y=0; y<coluna;y++){
+						System.out.print(" "+matriz[x][y]);
+						
+					}System.out.println("\t");
+					
+				}System.out.print("o resultado da diagonal principal é de: "+somaDiagonal);
 			}
 		}
-				
-			
-			
-			for(linha=0;linha<3;coluna++){
-				for(coluna=0; coluna<3;coluna++){
-					System.out.println(" "+vetor[linha][coluna]);
-					
-				}
-				System.out.println("\n");
-				
-			}
-			System.out.println("o resultado da diagonal principal é de: "+soma);
-			
-		
-		
-		
-		
-	}
-}
