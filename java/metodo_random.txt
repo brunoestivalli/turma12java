@@ -1,0 +1,6 @@
+((Math.random() * (max - min)) + min)
+
+Eu criei uma funcao pra lista
+public static int getRandom(int min, int max) {
+	    return (int) ((Math.random() * (max - min)) + min);
+	}
