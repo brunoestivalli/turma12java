@@ -9,7 +9,7 @@ public class Teste1 {
 		float NumConta=0;
 		double Debito=0,Credito=0, Saldo=0;
 		int DataAniversario=0;
-		float CPF=0;
+		double CPF=0;
 		int x=0;
 		int metodo;
 		boolean validacao = true;
@@ -20,6 +20,7 @@ public class Teste1 {
 		int NumTransacoes=1;
 		char Transacao='S';
 		double Total=0;
+		char verificacao1='S';
 		
 		//TABELA COM DAS CONTAS
 		
@@ -47,7 +48,7 @@ public class Teste1 {
 				}while(NumConta<1);
 				do {
 					
-					System.out.println("\nInforme o dia de hoje: ");
+					System.out.println("Informe o dia de hoje: ");
 					DataAniversario=leia.nextInt();
 					if(DataAniversario>=1 && DataAniversario<31) {
 						validacao=false;
@@ -58,18 +59,26 @@ public class Teste1 {
 				}while(validacao==true);
 				do {
 					System.out.println("Informe seu CPF: ");
-					CPF=leia.nextFloat();
+					CPF=leia.nextDouble();
 				
 				}while(CPF<1000000000);
-				System.out.printf("Seu Saldo é de %.2f ",Saldo);
+				System.out.printf("Seu Saldo é de %.2f reais",Saldo);
 				System.out.println("\n");
 				
 				do{	
 					
 					while( NumTransacoes<11) {
+							System.out.println("\n\nCONTA POUPANÇA\n\n");
+							do {
+								System.out.println("\nDeseja fazer uma transação ?");
+								Transacao=leia.next().toUpperCase().charAt(0);
+								if(Transacao!='S' && Transacao!='N' ) {
+									verificacao='S';
+								}else {
+									verificacao='N';
+								}
+							}while(verificacao=='S');
 						
-							System.out.println("\nDeseja fazer uma transação ?");
-							Transacao=leia.next().toUpperCase().charAt(0);
 							if(Transacao=='S') {
 							
 								System.out.println("Número de Transações "+NumTransacoes++);
@@ -99,10 +108,21 @@ public class Teste1 {
 								}else if(metodo==2) {
 									do {
 										if(Saldo>0) {
-											System.out.println("Digite o valor a Retirar: ");
-											Debito=leia.nextDouble();
-											Saldo=Saldo-Debito;	
-											System.out.println("Seu saldo é: "+Saldo+" reais");
+											do {
+												System.out.println("Digite o valor a Retirar: ");
+												Debito=leia.nextDouble();
+												if(Debito>Saldo) {
+													System.out.println("Não é possivel retirar um valor maior que o guardado");
+													verificacao1='S';
+												}else{
+														Saldo=Saldo-Debito;	
+														System.out.println("Seu saldo é: "+Saldo+" reais");
+														verificacao1='N';
+													
+													
+													
+												}
+											}while(verificacao1=='S');	
 										}else if(Saldo==0){
 											System.out.printf("Seu saldo é de %.2f reais, impossivel retirada de valor",Saldo);
 											System.out.println("\nGostaria de adicionar um valor(S/N): ");
@@ -130,21 +150,30 @@ public class Teste1 {
 										}
 								
 									}while(verificacao=='N');
-										}else if(adicionar=='N') {
-											System.out.println("Deseja voltar na parte da seleção de formas de pagamento ?");
-											voltar=leia.next().toUpperCase().charAt(0);
-										}
-									Total=Saldo+Total;
-								}else if(Transacao=='N'){
+										
+										
+								
+								Total=Saldo+Total;
+							}
+					
+					
+									}else if(adicionar=='N') {
+										
+										
+												
+											}
+							
 									System.out.println("\nEncerrada a sessão");
 									break;
+										}
 									
-								}
-						}
 					
-				}while(Transacao=='S');
-				
-			}
+								}while(Transacao=='S');
+			
+							}
+
+	
+			
 	}
 }
 
