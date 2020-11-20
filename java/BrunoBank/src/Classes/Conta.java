@@ -1,6 +1,6 @@
 package Classes;
 
-public class Conta {
+public abstract class Conta {
 	
 	//ATRIBUTOS
 	 
