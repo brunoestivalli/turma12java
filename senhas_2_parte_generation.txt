@@ -1,0 +1,9 @@
+Site: https://207.244.229.206:2083/
+ Usuario: luizacerchiari
+Senha: _+pT;8Y]Lu*b
+
+Nome do banco: Estivalli
+
+MySQL senha
+login: Estivalli_Usuario
+Senha: E)qOEmRN_3~k

@@ -144,7 +144,7 @@ package Aplicacoes;
 							validacao = true;
 						}
 					} while (validacao == false);
-					System.out.println(pagamento.getPrecoTotal());
+					System.out.println("Preço: "+pagamento.getPrecoTotal());
 					if (opcao == 1) {
 						pagamento.vistaDinheiro(pagamento.getPrecoTotal());
 						System.out.printf("Preço Final: %.2f", pagamento.getDinheiro());
@@ -161,9 +161,7 @@ package Aplicacoes;
 								validacao = false;
 							}
 						} while (validacao == false);
-						System.out.println(valor);
-						System.out.println(pagamento.getPrecoTotal());
-						pagamento.parceladoCartao(valor, pagamento.getPrecoTotal());
+						System.out.printf("Valor a pagar parcelado: %.2f",pagamento.parceladoCartao(valor, pagamento.getPrecoTotal()));
 					}
 					// Nota Fiscal
 					System.out.println(
@@ -186,7 +184,7 @@ package Aplicacoes;
 							x++;
 						}
 					}
-					System.out.println("\nO preço total é de: " + pagamento.getPrecoTotal());
+					//System.out.println( pagamento.getPrecoTotal());
 					if (opcao == 1) {
 						System.out.println("\nCom acrescimo de 9% de imposto e desconto de 20% devido a forma de pagamento");
 						System.out.printf("Preço: %.2f reais", pagamento.getDinheiro());
@@ -194,10 +192,15 @@ package Aplicacoes;
 						System.out.println("\nCom acrescimo de 9% de imposto e desconto de 15% devido a forma de pagamento");
 						System.out.printf("Preço: %.2f reais", pagamento.getCartao());
 					} else if (valor == 2) {
-						System.out.printf("\nForma de Pagamento: Parcelado em 2 vezes\n\t2 Parcelas de: %.2f",
+						
+						
+						
+						System.out.printf("\nForma de Pagamento: Parcelado em 2 vezes com 9 porcento de impostos\n2 Parcelas de: %.2f",
 								pagamento.getParcelado());
 					} else if (valor == 3) {
-						System.out.printf("\nForma de Pagamento: Parcelado em 3 vezes\n\t3 Parcelas de: %.2f",
+						
+						
+						System.out.printf("\nForma de Pagamento: Parcelado em 3 vezes com 10 procento de taxas e 9 porcento de impostos\n\t3 Parcelas de: %.2f",
 								pagamento.getParcelado());
 					}
 					System.out.print("\n\nDeseja continuar S/N: ");

@@ -51,11 +51,12 @@ package Classes;
 			public double parceladoCartao(int parcela, double total) {
 				if (parcela == 2) {
 					this.parcelado = total + (total * 9) /100;
+					System.out.printf("Preço Final : %.2f \n",this.parcelado);
 					this.parcelado = this.parcelado / 2;
 					return this.parcelado;
 				} else {
 					this.parcelado = total + (total * 19) /100;
-					System.out.println(this.parcelado);
+					System.out.printf("Preço Final : %.2f \n",this.parcelado);
 					this.parcelado = this.parcelado / 3;
 					return this.parcelado;
 				}
