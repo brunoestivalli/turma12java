@@ -1,4 +1,4 @@
-use db_primeira;
+use test;
 
 show tables;
 

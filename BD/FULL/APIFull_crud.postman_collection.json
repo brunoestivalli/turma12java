@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "4ab525b4-5577-4837-ae74-78a158b892d8",
+		"name": "APIFull_crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/pagina/manutencoes",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pagina",
+						"manutencoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/pagina/manutencoes",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pagina",
+						"manutencoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

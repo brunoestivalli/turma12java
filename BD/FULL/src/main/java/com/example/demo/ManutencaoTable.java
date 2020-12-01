@@ -12,24 +12,26 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-@Table(name="Manutencao")
-public class ManutencaoModelTable {
+@Table(name = "tb_manutencao")
+public class ManutencaoTable {
+
+	// colunas
 	@Id
 	@Column
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column
 	private String nome;
-	
+
 	@Column
 	private String categoria;
-	
+
 	@Column
-	@JsonFormat(pattern="yyyy-mm-dd")
+	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date data;
 
-	
+	// getters e setters
 
 	public Long getId() {
 		return id;
@@ -54,7 +56,7 @@ public class ManutencaoModelTable {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	
+
 	public Date getData() {
 		return data;
 	}
@@ -62,5 +64,5 @@ public class ManutencaoModelTable {
 	public void setData(Date data) {
 		this.data = data;
 	}
-	
+
 }
