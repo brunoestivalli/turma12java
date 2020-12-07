@@ -6,33 +6,39 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
-
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name= "PostagemModel")
+@Table(name = "PostagemModel")
 public class PostagemModel {
 
-	@Id 
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	@NotNull
 	private String titulo;
-	
+
 	@NotNull
 	private String texto;
-	
+
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date date = new java.sql.Date(System.currentTimeMillis());
 
-	//gets e sets 
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Tema tema;
+
+	// gets e sets
+
 	
+
 	public long getId() {
 		return id;
 	}
@@ -65,9 +71,12 @@ public class PostagemModel {
 		this.date = date;
 	}
 
-	
+	public Tema getTema() {
+		return tema;
+	}
 
-	
-	
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
 	
 }
