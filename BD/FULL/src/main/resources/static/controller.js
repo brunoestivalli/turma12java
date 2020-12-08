@@ -22,4 +22,16 @@ app.controller('myCtrl', function($scope, $http) {
 	}
 	$scope.buscarTodos();
 
+	 $scope.delete = function(){
+  $http.delete("http://localhost:8081/pagina/delete/"+$scope.id);
+  			}
+  
+  $scope.put = function(){
+	  $http.put("http://localhost:8081/pagina/put1/"+$scope.id,{
+
+		'nome' : $scope.nome,
+		'categoria' : $scope.categoria,
+		
+		})
+	}
 });

@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -86,6 +87,16 @@ public class Controller implements WebMvcConfigurer {
 	@PutMapping("/put2") 
 	public ResponseEntity<ManutencaoTable> put(@RequestBody ManutencaoTable postagem) {
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public String remover(@PathVariable Long id) {
+		try {
+			repository.deleteById(id);
+		return "sucesso";
+		}catch(Exception e) {
+			return "Erro: " + e.getMessage();
+		}
 	}
 
 
