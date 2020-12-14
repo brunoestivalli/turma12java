@@ -28,7 +28,7 @@ public class Controller {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
-	@GetMapping("/getAll")
+	@GetMapping
 	public List<PostagemModel> pesquisarTodos(){
 		return repository.findAll();
 	}

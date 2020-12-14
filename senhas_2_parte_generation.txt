@@ -7,3 +7,11 @@ Nome do banco: Estivalli
 MySQL senha
 login: Estivalli_Usuario
 Senha: E)qOEmRN_3~k
+
+-----------------------------------------
+
+Nome do banco: estivalli_blog_db
+
+MySQL senha
+login: estivalliBlogUser
+senha: ah@]acpv5n#m

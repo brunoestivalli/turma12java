@@ -10,6 +10,8 @@ insert into postagem_model (titulo, texto, date)values
     
 select * from postagem_model;
 
+drop table ;
+
 
 
 
