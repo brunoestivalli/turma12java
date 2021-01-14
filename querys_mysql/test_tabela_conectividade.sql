@@ -2,6 +2,8 @@ use APITest;
 
 show tables;
 
+select * from tb_tema;
+
 
 
 insert into postagem_model (titulo, texto, date)values
@@ -9,8 +11,6 @@ insert into postagem_model (titulo, texto, date)values
     ('Bruno Estivalli', 'Estou Feliz','2020-12-02');
     
 select * from postagem_model;
-
-drop table ;
 
 
 
